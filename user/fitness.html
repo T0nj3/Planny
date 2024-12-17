@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="../css/fitness.css">
+</head>
+<body>
+    <header>
+        <h1>🏋️ Fitness Tracker</h1>
+        <nav>
+            <a href="dashboard.html">
+                <button id="dashboardBtn"><i class="fa-solid fa-arrow-left"></i> Dashboard</button>
+            </a>
+            <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-section">
+            <h2>Loggfør Aktivitet</h2>
+            <select id="activityType">
+                <option value="" disabled selected>Velg treningstype</option>
+                <option value="Løping">Løping</option>
+                <option value="Sykling">Sykling</option>
+                <option value="Styrke">Styrketrening</option>
+                <option value="Svømming">Svømming</option>
+                <option value="Gåturer">Gåturer</option>
+                <option value="Yoga">Yoga</option>
+            </select>
+            <input type="number" id="activityDuration" placeholder="Varighet (i minutter)">
+            <input type="number" id="caloriesBurned" placeholder="Kalorier forbrent">
+            <div id="activityDetails"></div> <!-- Dynamisk detaljer -->
+            <input type="date" id="activityDate">
+            <button id="logActivityBtn">Loggfør Aktivitet</button>
+        </div>
+        <div class="filter-section">
+            <h2>Aktivitetslogg</h2>
+            <input type="text" id="searchActivity" placeholder="Søk etter aktivitet...">
+        </div>
+        <div id="activityList"></div>
+    </div>
+    <script src="../js/fitness.js"></script>
+</body>
+</html>

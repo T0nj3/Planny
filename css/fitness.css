@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #ff6b81;
+    --secondary-color: #fff5f8;
+    --background-gradient: linear-gradient(135deg, #ffe6f0, #ffb3c6);
+    --text-color: #333;
+    --button-color: #ff6b81;
+    --button-hover-color: #e75870;
+    --border-color: #ffb6c1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ff6b81;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+}
+
+header button {
+    background: white;
+    color: #ff6b81;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+header button:hover {
+    background: #ffb6c1;
+    color: white;
+    transform: scale(1.05);
+}
+
+header a {
+    text-decoration: none;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+input, textarea, select, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--button-hover-color);
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-3px);
+}
+
+#entryList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.entry {
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.entry:hover {
+    transform: scale(1.02);
+}
+
+.entry h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.entry p, .entry small {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.entry button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.entry button:hover {
+    background-color: var(--button-hover-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    input, textarea, select, button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .entry {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    input, textarea, select, button {
+        font-size: 0.8rem;
+    }
+}

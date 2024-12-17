@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utfyllende Dagbok</title>
+    <link rel="stylesheet" href="../css/mental-health.css">
+</head>
+<body>
+    <header>
+        <h1> Mental Health</h1>
+        <nav>
+            <a href="dashboard.html" class="btn-link">
+                <button id="dashboardBtn">
+                    <i class="fa-solid fa-arrow-left"></i> Dashboard
+                </button>
+            </a>
+            <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-section">
+            <h2>Legg til Dagboknotat</h2>
+            <input type="text" id="noteTitle" placeholder="Tittel på notatet...">
+            <textarea id="noteText" placeholder="Skriv ned tankene dine..."></textarea>
+            <div class="form-controls">
+                <select id="noteCategory">
+                    <option value="Personlig">Personlig</option>
+                    <option value="Jobb">Jobb</option>
+                    <option value="Trening">Trening</option>
+                    <option value="Annet">Annet</option>
+                </select>
+                <input type="date" id="noteDate">
+                <button id="saveEntryBtn">💾 Lagre</button>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h2>Søk i Notater</h2>
+            <input type="text" id="searchInput" placeholder="Søk etter tekst...">
+            <select id="filterCategory">
+                <option value="Alle">Alle Kategorier</option>
+                <option value="Personlig">Personlig</option>
+                <option value="Jobb">Jobb</option>
+                <option value="Trening">Trening</option>
+                <option value="Annet">Annet</option>
+            </select>
+        </div>
+        <div id="entryList"></div>
+    </div>
+    <script src="../js/mental-health.js"></script>
+</body>
+</html>

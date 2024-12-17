@@ -18,7 +18,7 @@ document.getElementById("registerForm")?.addEventListener("submit", function (e)
         return;
     }
 
-    const newUser = { id: Date.now(), username, email, password }; // Legg til unik id
+    const newUser = { id: Date.now(), username, email, password }; 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
@@ -37,7 +37,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function (e) {
 
     if (user) {
         alert(`Welcome back, ${user.username}!`);
-        localStorage.setItem("loggedInUser", JSON.stringify({ id: user.id, username: user.username })); // Lagre unik info
+        localStorage.setItem("loggedInUser", JSON.stringify({ id: user.id, username: user.username })); 
         window.location.href = "/user/dashboard.html";
     } else {
         alert("Invalid username or password!");
