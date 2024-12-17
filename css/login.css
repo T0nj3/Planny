@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ff8fab);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: slideIn 0.8s ease-in-out;
+    position: relative;
+}
+
+h1 {
+    color: #ff6b81;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff6b81;
+    box-shadow: 0 0 8px rgba(255, 107, 129, 0.4);
+}
+
+button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #e75870;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(231, 88, 112, 0.5);
+}
+
+a {
+    color: #ff6b81;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

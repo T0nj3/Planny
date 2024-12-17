@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker</title>
+    <link rel="stylesheet" href="../css/calorie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>🥗 Calorie Tracker</h1>
+        <nav>
+            <a href="dashboard.html" class="btn-link">
+                <button id="dashboardBtn">
+                    <i class="fa-solid fa-arrow-left"></i> Dashboard
+                </button>
+            </a>
+            <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </nav>
+    </header>
+
+    <section id="day-carousel">
+        <button id="prevDay" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div id="carousel" class="carousel-container"></div>
+        <button id="nextDay" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    </section>
+
+    <div class="tracker-container">
+        <h2>Track Your Calories</h2>
+        <div id="goal-section">
+            <input type="number" id="calorieGoal" placeholder="Set Daily Calorie Goal">
+            <button id="setGoalBtn"><i class="fa-solid fa-bullseye"></i> Set Goal</button>
+        </div>
+
+        <div id="calorie-input">
+            <input type="text" id="meal" placeholder="Meal Name">
+            <input type="number" id="calories" placeholder="Calories">
+            <button id="addMeal"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+
+        <ul id="mealList"></ul>
+
+        <div id="summary">
+            <p>Total Calories: <span id="totalCalories">0</span> / <span id="calorieGoalDisplay">0</span> kcal</p>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p>Meals: <span id="mealCount">0</span> | Avg. Calories per Meal: <span id="avgCalories">0</span></p>
+        </div>
+
+        <div class="tracker-actions">
+            <button id="filterMeals"><i class="fa-solid fa-filter"></i> Filter High-Calorie Meals</button>
+            <button id="clearMeals"><i class="fa-solid fa-trash"></i> Clear All Meals</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Calorie Tracker</p>
+    </footer>
+
+    <script src="../js/calorie.js"></script>
+</body>
+</html>

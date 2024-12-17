@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ff8fab);
+    color: #333;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+h1 {
+    color: #ff6b81;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6b81;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+nav ul li a:hover {
+    background-color: #ffb6c1;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.5);
+}
+
+button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e75870;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(231, 88, 112, 0.5);
+}
+
+button i {
+    margin-right: 10px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

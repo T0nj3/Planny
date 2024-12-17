@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Planner</title>
+    <link rel="stylesheet" href="../css/budget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   
+    <header>
+        <h1>💰 Monthly Budget Planner</h1>
+        <nav>
+            <a href="dashboard.html" class="btn-link">
+                <button id="dashboardBtn">
+                    <i class="fa-solid fa-arrow-left"></i> Dashboard
+                </button>
+            </a>
+            <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+        </nav>
+    </header>
+
+  
+    <div class="budget-container">
+        <div id="month-section">
+            <h2>Select Month</h2>
+            <select id="monthSelect"></select>
+        </div>
+
+        <div id="income-section">
+            <h2>Enter Your Monthly Income</h2>
+            <input type="number" id="income" placeholder="Enter your income in NOK" />
+            <button id="setIncome">Set Income</button>
+            <p id="incomeDisplay">Monthly Income: <span>0</span> NOK</p>
+        </div>
+
+        <h2>Set Your Budget</h2>
+        <div id="categories">
+            
+            <div class="category">
+                <label><i class="fa-solid fa-house"></i> Rent</label>
+                <input type="number" class="plannedInput" id="rentPlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="rent"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="rentList"></ul>
+            </div>
+
+            <div class="category">
+                <label><i class="fa-solid fa-utensils"></i> Food</label>
+                <input type="number" class="plannedInput" id="foodPlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="food"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="foodList"></ul>
+            </div>
+
+            <div class="category">
+                <label><i class="fa-solid fa-shirt"></i> Clothing</label>
+                <input type="number" class="plannedInput" id="clothingPlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="clothing"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="clothingList"></ul>
+            </div>
+
+            <div class="category">
+                <label><i class="fa-solid fa-mug-hot"></i> Cafe/Restaurants</label>
+                <input type="number" class="plannedInput" id="cafePlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="cafe"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="cafeList"></ul>
+            </div>
+
+            <div class="category">
+                <label><i class="fa-solid fa-person-running"></i> Activities</label>
+                <input type="number" class="plannedInput" id="activitiesPlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="activities"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="activitiesList"></ul>
+            </div>
+
+            <div class="category">
+                <label><i class="fa-solid fa-hand-holding-dollar"></i> Loan</label>
+                <input type="number" class="plannedInput" id="loanPlanned" placeholder="Planned amount">
+                <button class="toggleDropdown">⏷</button>
+                <button class="addExpense" data-category="loan"><i class="fa-solid fa-plus"></i></button>
+                <ul class="dropdown" id="loanList"></ul>
+            </div>
+        </div>
+
+        <h2>Budget Summary</h2>
+        <div id="summary">
+            <p>Total Planned: <span id="totalPlanned">0</span> NOK</p>
+            <p>Total Spent: <span id="totalSpent">0</span> NOK</p>
+            <p>Remaining Balance: <span id="remaining">0</span> NOK</p>
+        </div>
+
+        <button id="resetBudget" class="resetBtn">Reset Budget</button>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2024 Budget Planner. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/budget.js"></script>
+</body>
+</html>

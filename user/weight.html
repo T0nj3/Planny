@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracker</title>
+    <link rel="stylesheet" href="../css/weight.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Weight Tracker</h1>
+        <nav>
+            <a href="dashboard.html">
+                <button id="dashboardBtn"><i class="fa-solid fa-arrow-left"></i> Dashboard</button>
+            </a>
+            <a href="/index.html">
+            <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="logWeight">
+
+            <h2>Set Your Weight Goals</h2>
+            <div class="goal-input-container">
+                <input type="number" id="currentWeight" placeholder="Current Weight (kg)" min="0">
+                <input type="number" id="goalWeight" placeholder="Goal Weight (kg)" min="0">
+                <button id="setGoalBtn"><i class="fa-solid fa-flag-checkered"></i> Set Goal</button>
+            </div>
+        </section>
+
+        <section id="progressSection">
+            <h2>Your Progress</h2>
+            <canvas id="weightChart"></canvas>
+            <ul id="weightHistory"></ul>
+        </section>
+
+        <section id="goalSection">
+            <h2>Log Your Weight</h2>
+            <div class="input-container">
+                <input type="number" id="weightInput" placeholder="Weight (kg)" min="0">
+                <button id="addWeightBtn"><i class="fa-solid fa-plus"></i> Add Weight</button>
+            </div>
+        
+            <div class="goal-progress">
+                <div class="weight-lost-circle">
+                    <span id="weightLostCircle">0</span>
+                    <p>KG Lost</p>
+                </div>
+                <div class="goal-details">
+                    <div class="goal-card">
+                        <h4>Starting Weight</h4>
+                        <p id="startWeightDisplay">105.0 kg</p>
+                    </div>
+                    <div class="goal-card">
+                        <h4>Goal Weight</h4>
+                        <p id="goalWeightDisplay">79.0 kg</p>
+                    </div>
+                    <div class="goal-card">
+                        <h4>Weight Lost</h4>
+                        <p id="weightLost">8.0 kg</p>
+                    </div>
+                </div>
+        
+                <div class="milestone-section">
+                    <h3 class="milestone-title">Milestones</h3>
+                    <ul id="milestones"></ul>
+                </div>
+                
+                <section id="motivation">
+                    <h2>Motivation for Today</h2>
+                    <p id="motivationText">Small steps lead to big changes.</p>
+                </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Planny. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/weight.js"></script>
+</body>
+</html>
